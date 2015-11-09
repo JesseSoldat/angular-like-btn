@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Hello, World</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+ <div ng-controller="MyController">
+ 
+  <div class="container">
+    <h2>{{hello}}</h2>
+    <input ng-model="inputText" placeholder="pick your topic" type="text">
+    <h3>{{inputText}}</h3>
+   
+    <button ng-click="like()">
+      {{message1}}: <span>{{count1}}</span>
+    </button>
+    <button ng-click="dislike()">
+      {{message2}}:  <span>{{count2}}</span>
+    </button>
+  </div> 
+</div>
+<div class="form" ng-controller="FormController">
+  <h4>Please Fill Out the form {{firstName}}</h4>
+  <form>
+    <input ng-model="firstName" type="text" placeholder="First Name">
+    <input ng-model="lastName" type="text" placeholder="Last Name">
+    <input ng-model="age" type="text" placeholder="Age">
+    <button ng-click="changeText()">Submit</button>
+
+    <h4>{{name}} {{firstName}} {{lastName}}</h4>
+  </form>
+</div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
